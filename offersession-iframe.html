@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embedded Iframe</title>
+</head>
+<body>
+  <iframe id ="offersession" src="input-selection-2.html" width="600" height="600" frameborder="0"></iframe>
+<script>
+        function toggleElement() {
+            let element = document.getElementById('offersession');
+            
+            if (element.src.indexOf('input-selection-2.html') !== -1) {
+                element.src = 'immersive-vr-session.html'; 
+            } else {
+                element.src = 'input-selection-2.html';
+            }
+            
+            // Schedule the next toggle after 5 seconds
+            setTimeout(toggleElement, 5000);
+        }
+
+        // Start the initial toggle after the page loads
+        window.onload = function () {
+            setTimeout(toggleElement, 5000);
+        };
+</script>
+</body>
+</html>
