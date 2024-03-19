@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Example HTMLModelElement</title>
+    <style>
+      html,
+      body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        place-items: center;
+        overflow: hidden;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 95%;
+        max-width: 90vw;
+        max-height: 90vh;
+      }
+
+      model,
+      picture,
+      img {
+        width: 100%;
+        height: auto;
+        display: grid;
+        place-items: center;
+        max-height: 90vh;
+      }
+
+      img {
+        object-fit: contain;
+      }
+
+      @media (orientation: landscape) {
+        body {
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>An example <code>model</code> Element</h1>
+    <model interactive width="670" height="1191" src="assets/FlightHelmet.usdz" poster="assets/FlightHelmet.png">
+    </model>
+  </body>
+</html>
