@@ -188,6 +188,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         session.requestReferenceSpace(refSpaceType).then((refSpace) => {
           if (session.isImmersive) {
             xrImmersiveRefSpace = refSpace;
+            navigator.getGamepads();
           } else {
             inlineViewerHelper = new InlineViewerHelper(gl.canvas, refSpace);
             inlineViewerHelper.setHeight(1.6);
