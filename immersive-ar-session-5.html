@@ -179,7 +179,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         if (session.isImmersive) {
           if (++count % 100 === 0) {
             passthroughVisible = !passthroughVisible;
-            session.updateRenderState({ pasthroughFullyObscured: passthroughVisible });
+            session.updateRenderState({ passthroughFullyObscured: passthroughVisible });
           }
         }
         let refSpace = session.isImmersive ?
